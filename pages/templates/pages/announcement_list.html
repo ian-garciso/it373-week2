@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}Announcements{% endblock %}
+
+{% block content %}
+<h1>Announcements</h1>
+<ul>
+  {% for a in announcements %}
+    <li><a href="/announcements/{{ a.id }}/">{{ a.title }}</a></li>
+  {% empty %}
+    <li>No announcements available.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

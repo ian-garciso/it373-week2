@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}My Django Site{% endblock %}</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    nav { background: #333; padding: 1rem; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/announcements/">Announcements</a>
+  </nav>
+
+  {% block content %}{% endblock %}
+</body>
+</html>
